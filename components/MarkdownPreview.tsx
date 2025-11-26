@@ -4,10 +4,40 @@ interface MarkdownPreviewProps {
   markdown: string
 }
 
+function parseTable(tableText: string): string {
+  const lines = tableText.trim().split('\n')
+  if (lines.length < 2) return tableText
+
+  let html = '<div class="overflow-x-auto"><table class="min-w-full border-collapse border border-gray-300 text-sm">'
+
+  lines.forEach((line, index) => {
+    // Pular linha separadora (|--|--|...)
+    const separatorRegex = new RegExp('^\\|[-:\\s|]+\\|$')
+    if (separatorRegex.test(line.trim())) return
+
+    const cells = line.split('|').filter((_, i, arr) => i > 0 && i < arr.length - 1)
+    const isHeader = index === 0
+    const tag = isHeader ? 'th' : 'td'
+    const cellClass = isHeader
+      ? 'border border-gray-300 px-3 py-2 bg-gray-100 font-semibold text-left'
+      : 'border border-gray-300 px-3 py-2'
+
+    html += '<tr>'
+    cells.forEach(cell => {
+      html += `<${tag} class="${cellClass}">${cell.trim()}</${tag}>`
+    })
+    html += '</tr>'
+  })
+
+  html += '</table></div>'
+  return html
+}
+
 export function MarkdownPreview({ markdown }: MarkdownPreviewProps) {
   const html = useMemo(() => {
-    // Conversão simples de Markdown para HTML
-    let result = markdown
+    // Detectar e converter tabelas primeiro
+    const tableRegex = /(\|[^\n]+\|\n)+/g
+    let result = markdown.replace(tableRegex, (match) => parseTable(match))
 
     // Headings
     result = result.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold text-blue-700 mt-6 mb-4 border-b-2 border-blue-700 pb-2">$1</h1>')
@@ -17,8 +47,11 @@ export function MarkdownPreview({ markdown }: MarkdownPreviewProps) {
     // Bold
     result = result.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900">$1</strong>')
 
-    // Links
+    // Links (fora de tabelas)
     result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>')
+
+    // <br> tags do markdown
+    result = result.replace(/ <br> /g, '<br />')
 
     // Checkboxes
     result = result.replace(/- \[x\] /g, '<div class="flex items-start gap-2 mb-2"><input type="checkbox" checked disabled class="mt-1 h-4 w-4 rounded border-gray-300" /><span>')

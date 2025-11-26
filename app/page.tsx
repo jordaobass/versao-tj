@@ -7,6 +7,7 @@ import { SummaryCard } from '@/components/SummaryCard'
 import { ValidationCard } from '@/components/ValidationCard'
 import { MarkdownPreview } from '@/components/MarkdownPreview'
 import { DateSelector } from '@/components/DateSelector'
+import { AppLayout } from '@/components/AppLayout'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
@@ -17,7 +18,7 @@ import { generateMarkdown, markdownToHtml } from '@/lib/generateMd'
 import { validateItems, type ValidationIssue } from '@/lib/validations-items'
 import type { ParsedData } from '@/types'
 
-export default function HomePage() {
+function HomeContent() {
   const [file, setFile] = useState<File | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -174,12 +175,12 @@ export default function HomePage() {
     process.env.NEXT_PUBLIC_ADO_PROJECT
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-8 px-4">
+    <div className="py-8 px-6">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header */}
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            📋 PJe Checklist Generator
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            Checklist de Implantação
           </h1>
           <p className="text-gray-600">
             Gerador de checklist para versões PJe a partir de CSV/Excel
@@ -326,5 +327,13 @@ export default function HomePage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function HomePage() {
+  return (
+    <AppLayout>
+      <HomeContent />
+    </AppLayout>
   )
 }

@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "schenkerjon@gmail.com",
+      "password": "010203",
+      "name": "Jon Schenker"
+    },
+    {
+      "id": "2",
+      "email": "joao.elias@tjrj.jus.br",
+      "password": "joao123",
+      "name": "João Elias"
+    }
+  ]
+}
