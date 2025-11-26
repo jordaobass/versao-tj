@@ -1,0 +1,9 @@
+Data;RDM;Requisição/Incidente;Código/Fluxo/API;Descrição;Equipe;Responsável por implantar;Migration / Script;PJE - Fluxo - API: pull request;Link implantação;Aculturamento;Obs;Problemas;Descrição Problema;Tipo
+15/01/2025;RDM123456;INC2024.0124267;Código;PJE - Resolução de problemas no redirect da consulta pública;Apoio;João Silva;;https://dev.azure.com/pjerj/PJe/_git/pje/pullrequest/22702;;;Janela: 21h - 22h. DISER-OPERAÇÃO: 18h. DIBDA: 18h.;;;
+15/01/2025;RDM123456;REQ2024.0089123;Fluxo;Implementação do novo fluxo de distribuição automática;Equipe 1;Maria Santos;;https://dev.azure.com/pjerj/PJe/_git/pje/pullrequest/22703;;;Com indisponibilidade;;;
+16/01/2025;RDM123456;REQ2024.0089456;Script;Migration para atualização de tabela de processos;Equipe 2;Pedro Costa;V_1.2.3_atualiza_processos.sql;;;;;Problema de performance;Lentidão detectada;
+16/01/2025;RDM123456;INC2024.0124789;API;Correção no endpoint de consulta de processos;Equipe 1;Ana Oliveira;;https://dev.azure.com/pjerj/PJe/_git/pje-api/pullrequest/5601;;;;;;
+17/01/2025;RDM123456;REQ2024.0090001;Código;Ajuste no módulo de peticionamento eletrônico;Sustentação;Carlos Souza;;https://dev.azure.com/pjerj/PJe/_git/pje/pullrequest/22704;;;;;;Sustentação
+17/01/2025;RDM123456;INC2024.0125000;Fluxo;Correção no fluxo de intimações;Equipe 2;Juliana Lima;;https://dev.azure.com/pjerj/PJe/_git/pje/pullrequest/22705;;;;;;
+17/01/2025;RDM123456;REQ2024.0090123;API;Nova API de integração com sistema externo;Equipe 1;Roberto Alves;;;https://dev.azure.com/pjerj/PJe/_wiki/wikis/PJe.wiki/123/API-Integracao;;;;;
+18/01/2025;RDM123456;INC2024.0125111;Código;Hotfix para erro na validação de CPF;Apoio;Fernanda Costa;;https://dev.azure.com/pjerj/PJe/_git/pje/pullrequest/22706;;;;;;

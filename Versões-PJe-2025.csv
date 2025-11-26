@@ -1,0 +1,121 @@
+﻿Data;RDM;Requisição/Incidente;Código/Fluxo/API;Descrição;Equipe;Responsável por implantar;Migration / Script;"PJE - Fluxo - API: pull request ; Conector pull request + pull request do PJe ";Link implantação / parâmetros /  tags (apis);Aculturamento;Obs;Problemas;Descrição Problema;Tipo
+01/10/2025;"Com indisponibilidade
+ 21h-22h 
+RDM2025.0007295
+DISER-OPERAÇÃO: 18h
+DIBDA: 18h";REQ2025.0203188;API;API Convenio - Ajuste na certidão de endereço;Equipe 4;Guilherme;Não ;https://dev.azure.com/pjerj/PJe/_git/integracao-api-convenios/pullrequest/23110;https://dev.azure.com/pjerj/PJe/_build/results?buildId=91410&view=results;;;;;
+;;REQ2025.0299968;API;API Spring Config - Ajustes no properties da API PJe Reports (Corrige multipart e aumenta dias do relatório de acesso);Sustentação;Jorge Bilitário;Não ;https://dev.azure.com/pjerj/PJe/_git/integracao-pje-api-spring-cloud-config-properties/pullrequest/23213;;;;;;
+;;INC2025.0137238;Código;PJe - Altera versao do conector do SCM;Sustentação;Jorge Bilitário;Não ;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/23245;;;;;;
+;;INC2025.0137238;Conector;SCM - Melhora logs. Adiciona transacao quando necessario (job prazos nao processuais). Cria mandado expediente, em caso de erro anterior;Sustentação;Jorge Bilitário;Não ;https://dev.azure.com/pjerj/PJe/_git/integracao-pje-conector-scm/pullrequest/23216;;;;;;
+;;INC2025.0141942;Código;Rollback [LOCAL][TJRJ] Melhoria na consulta de tarefas do painel de usuario usando parte do número do processo;Sustentação;Alberto ;Não ;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/22887;;;;;;
+;;REQ2025.0050799;Código;"[PJEVII-5243][TJDFT] Colocar ao lado do campo ""Informar o nome social"" uma tooltip informativa";Equipe 1;Gabriel Nascimento;Não ;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/23178;;;;;;
+;;REQ2025.0050799;Código;[PJEII-26161] Corrige caracteres com acento não exibidos corretamente;Equipe 1;Gabriel Nascimento;Não ;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/23178;;;;;;
+;;REQ2025.0050799;Código;[PJEII-26169] [TRF1] BUGFIX-26105 Metodo obterIdsPessoasViaCpf esta com condicao invertida.;Equipe 1;Gabriel Nascimento;Não ;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/23178;;;;;;
+;;REQ2025.0050799;Código;[PJEVII-5529] [TJDFT] Exceção ao alterar ordem de anexos ainda sem classificação;Equipe 1;Gabriel Nascimento;Não ;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/23178;;;;;;
+;;REQ2025.0230484;Código;[TJRJ][LOCAL] Implementa job e tabela para arquivamento de comunicações com erro ao Domicílio Eletrônico;Equipe 3;Jônatas Pereira;Sim;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/23247;Plano de Implantação - Log Integração Histórico - Overview;N/A;;;;
+;;REQ2025.0230484;Migration;[TJRJ][LOCAL] Implementa job e tabela para arquivamento de comunicações com erro ao Domicílio Eletrônico;Equipe 3;Jônatas Pereira;Sim;https://dev.azure.com/pjerj/PJe/_git/PJe/pullrequest/23247;Plano de Implantação - Log Integração Histórico - Overview;N/A;;;;
+;;REQ2025.0315696;Script;Associação de registradores aos órgãos julgadores no PJe;Equipe 2;José Tirabassi;Script;N/A;Inserts Registradores 1.sql;;;;;
+02/10/2025;"
+
+
+
+
+
+
+
+
+
+
+""Com indisponibilidade
+ 14:30h-15h 
+RDM2025.0007349
+DISER-OPERAÇÃO: 14:30h
+DIBDA: 14:30h""
+
+
+
+
+
+
+
+
+
+
+";"REQ2025.0315696
+";Script;"Associação de registradores aos órgãos julgadores no PJe
+";Equipe 2;José Tirabassi;Script;N/A;Inserts Registradores 1.sql;;;;;Emergencial
+;;REQ2025.0050799;Código;"Rolback da versão [PJEVII-5243][TJDFT] Colocar ao lado do campo ""Informar o nome social"", [PJEII-26161] Corrige caracteres com acento não exibidos corretamente, [PJEII-26169] [TRF1] BUGFIX-26105 Metodo obterIdsPessoasViaCpf esta com condicao invertida., [PJEVII-5529] [TJDFT] Exceção ao alterar ordem de anexos ainda sem classificação";Equipe 1;Gabriel Nascimento;Sim;;;;;;;
+08/10/2025;;REQ2025.0297441;API;API Prevencao - Relatório de Possíveis Preventos - Tratamento de Carta Precatória;Equipe 4;Alexandre;Script;Seguir plano de implantação =>;https://dev.azure.com/pjerj/PJe/_wiki/wikis/PJe.wiki/2958/Plano-de-implanta%C3%A7%C3%A3o-Preven%C3%A7%C3%A3o-002;;;;;
+;;REQ2025.0297453;API;API Prevencao - Relatório de Possíveis Preventos - Exibir partes sigilosas no relatório;Equipe 4;Alexandre;Não ;;;;;;;
+;;REQ2025.0136971;API;API Prevencao - Relatório de Possíveis Preventos - Incluir classe principal na tabela da prevenção;Equipe 4;Alexandre;Migration;;;;;;;
+;;REQ2025.0136971;API;API Prevencao - Relatório de Possíveis Preventos - Datas para indicador de tempo do processo completo;Equipe 4;Alexandre;Migration;;;;;;;
+;;REQ2025.0136971;API;API Prevencao - Relatório de Possíveis Preventos - Resiliência nos processos;Equipe 4;Alexandre;Não ;;;;;;;
+;;REQ2024.0000218;API;API ECarta - Melhorias Solicitadas pelo Sonar;Equipe 4;Ibimon;Não ;https://dev.azure.com/pjerj/PJe/_git/integracao-pje-api-ecarta-localizador/pullrequest/23272;https://dev.azure.com/pjerj/PJe/_build/results?buildId=91835&view=results;;;;;
+;;REQ2025.0141635;Código;Portal de Serviços externo - Implementação - Integrar Petição Intercorrente com GRERJ;Equipe 3;Mateus Gobo;Não ;;;;;;;
+;;INC2025.0143196;Fluxo;Correção da tarefa de medidas cautelares com baixa ;Sustentação;Alberto ;Não ;Republicação do fluxo. já salvo a label;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
