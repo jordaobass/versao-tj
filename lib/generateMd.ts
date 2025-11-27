@@ -37,24 +37,6 @@ function generateItem(item: PjeItem, markComplete: boolean): string {
 }
 
 /**
- * Gera seção de zona
- */
-function generateZonaSection(
-  zona: string,
-  items: readonly PjeItem[],
-  markComplete: boolean
-): string {
-  if (items.length === 0) return ''
-
-  let section = `\n## ${zona}\n\n`
-  for (const item of items) {
-    section += generateItem(item, markComplete) + '\n'
-  }
-
-  return section
-}
-
-/**
  * Gera seção de indisponibilidade programada
  */
 function generateIndisponibilidade(data: ParsedData): string {

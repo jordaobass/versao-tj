@@ -19,7 +19,7 @@ import { validateItems, type ValidationIssue } from '@/lib/validations-items'
 import type { ParsedData } from '@/types'
 
 function HomeContent() {
-  const [file, setFile] = useState<File | null>(null)
+  const [, setFile] = useState<File | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [data, setData] = useState<ParsedData | null>(null)
