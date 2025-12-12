@@ -87,7 +87,11 @@ export async function parseTagsFile(file: File): Promise<TagsResult> {
   const arrayBuffer = await file.arrayBuffer()
   const workbook = XLSX.read(arrayBuffer, { type: 'array' })
 
-  const firstSheet = workbook.Sheets[workbook.SheetNames[0]]
+  const firstSheetName = workbook.SheetNames[0]
+  if (!firstSheetName) {
+    throw new Error('Arquivo não contém planilhas')
+  }
+  const firstSheet = workbook.Sheets[firstSheetName]
   if (!firstSheet) {
     throw new Error('Arquivo não contém planilhas')
   }
@@ -152,15 +156,18 @@ export async function parseTagsFile(file: File): Promise<TagsResult> {
       itemsByDate[currentData] = { requisicoes: new Set(), descricoes: [] }
     }
 
+    const dateEntry = itemsByDate[currentData]
+    if (!dateEntry) continue
+
     const reqId = row.requisicao.trim()
     const desc = row.descricao.trim()
 
     // Adicionar requisição (evitar duplicatas)
-    itemsByDate[currentData].requisicoes.add(reqId)
+    dateEntry.requisicoes.add(reqId)
 
     // Adicionar descrição se existir (somente a descrição, sem o ID)
     if (desc) {
-      itemsByDate[currentData].descricoes.push(desc)
+      dateEntry.descricoes.push(desc)
     }
   }
 

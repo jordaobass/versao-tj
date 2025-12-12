@@ -188,7 +188,11 @@ export async function parseFile(file: File): Promise<{
   const workbook = XLSX.read(arrayBuffer, { type: 'array' })
 
   // Pegar primeira planilha
-  const firstSheet = workbook.Sheets[workbook.SheetNames[0]]
+  const firstSheetName = workbook.SheetNames[0]
+  if (!firstSheetName) {
+    throw new Error('Arquivo não contém planilhas')
+  }
+  const firstSheet = workbook.Sheets[firstSheetName]
   if (!firstSheet) {
     throw new Error('Arquivo não contém planilhas')
   }

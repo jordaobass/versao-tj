@@ -38,7 +38,7 @@ export function detectJanela(text: string): string | null {
  */
 export function detectDiserOperacao(text: string): string | null {
   const match = text.match(/DISER-OPERAÇÃO:\s*(\d{1,2}h)/i)
-  return match ? match[1] : null
+  return match?.[1] ?? null
 }
 
 /**
@@ -46,7 +46,7 @@ export function detectDiserOperacao(text: string): string | null {
  */
 export function detectDibda(text: string): string | null {
   const match = text.match(/DIBDA:\s*(\d{1,2}h)/i)
-  return match ? match[1] : null
+  return match?.[1] ?? null
 }
 
 /**

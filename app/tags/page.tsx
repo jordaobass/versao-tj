@@ -36,9 +36,10 @@ function TagsContent() {
       setAvailableDates(dates)
 
       // Selecionar primeira data por padrão
-      if (dates.length > 0) {
-        setSelectedDate(dates[0])
-        const filteredTags = result.tags.filter((t) => t.data === dates[0])
+      const firstDate = dates[0]
+      if (firstDate) {
+        setSelectedDate(firstDate)
+        const filteredTags = result.tags.filter((t) => t.data === firstDate)
         setMarkdown(generateTagsMarkdown(filteredTags))
       }
     } catch (err) {
